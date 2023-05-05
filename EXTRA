@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+
+    char txt[100];
+    int i,j;
+    printf("palavra\n");
+    fgets(txt,100,stdin);
+
+    for (i=0; txt[i] != '\0'; i++)
+    {
+        if (txt[i] == 'r' || txt[i] == 'R')
+        {
+              if (txt[i + 1] != ' '  && txt[i + 1] != 'r' && txt[i + 1] != 'R'){
+                if (txt[i] == 'r')
+                    txt[i]='l';
+              }
+                else
+                    txt[i]='L';
+
+                    for (j=i+1;j<100;j++){
+                            txt [j] = txt [j+1];
+                    }
+
+
+
+        }
+
+
+
+    }
+
+    printf("%s",txt);
+
+
+
+
+    return 0;
+}
